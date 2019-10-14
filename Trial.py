@@ -5,7 +5,7 @@ import time
 pygame.init()
 
 windows_width = 1000
-windows_height = 500
+windows_height = 50
 
 win = pygame.display.set_mode((windows_width, windows_height))
 pygame.display.set_caption("First Game")
