@@ -1,3 +1,4 @@
+import pygame
 
 class player(object):
     def __init__(self, x, y, width, height, vel, color, life):
@@ -16,5 +17,13 @@ class player(object):
         if not self.dead:
             pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.height))
 
+
+#
+# class balls(object):
+#     def __init__(self):
+#         self.shot = []
+#
+#     def __init__(self, array):
+#         self.shot = array
 
 

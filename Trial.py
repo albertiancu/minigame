@@ -1,24 +1,18 @@
 import time
+import pygame
 from functions import *
 from our_classes import *
 
+
 pygame.init()
 
-windows_width = 1000
-windows_height = 500
-
-win = pygame.display.set_mode((windows_width, windows_height))
-pygame.display.set_caption("First Game")
-
-
-
-#main loop
 player1 = player(700, 400, 40, 60, 5, (255, 0, 0), 10)
 computer = player(100, 400, 40, 60, 5, (0, 255, 0), 10)
 
 run = True
 shots = []
 lastShotTime = time.time()
+
 
 while run:
     pygame.time.delay(50)
@@ -79,7 +73,7 @@ while run:
             player1.jumpCount = 10
 
 
-    drawWindow()
+    drawWindow(win, player1, computer, shots)
 
 
 
