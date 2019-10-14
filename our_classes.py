@@ -1,3 +1,4 @@
+from Trial import *
 
 class player(object):
     def __init__(self, x, y, width, height, vel, color, life):

@@ -1,5 +1,6 @@
 import pygame
 
+
 def text_to_screen(screen, text, x, y, color = (255, 255, 255), size = 20):
     font = pygame.font.SysFont("comicsansms", size)
     text = font.render(text, True, color)
