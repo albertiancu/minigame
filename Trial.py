@@ -4,7 +4,7 @@ import time
 
 pygame.init()
 
-windows_width = 100
+windows_width = 200
 windows_height = 500
 
 win = pygame.display.set_mode((windows_width, windows_height))
