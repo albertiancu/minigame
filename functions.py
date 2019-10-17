@@ -1,4 +1,5 @@
 import pygame
+from GlobalParameters import *
 
 
 def text_to_screen(screen, text, x, y, color = (255, 255, 255), size = 20):
@@ -7,7 +8,7 @@ def text_to_screen(screen, text, x, y, color = (255, 255, 255), size = 20):
     screen.blit(text,(x, y))
 
 
-def drawWindow():
+def drawWindow(win, player1, computer, shots):
     win.fill((0, 0, 0))  # Fills the screen with black
     player1.draw(win)
     computer.draw(win)
