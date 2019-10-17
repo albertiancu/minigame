@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="005ae5a6-feb8-4ab5-a903-60443e45e925" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/our_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/our_classes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,6 +97,7 @@
       <updated>1571072280519</updated>
       <workItem from="1571072281775" duration="2341000" />
       <workItem from="1571303146823" duration="832000" />
+      <workItem from="1571304616723" duration="5021000" />
     </task>
     <task id="LOCAL-00001" summary="revvrtv">
       <created>1571303353288</created>
@@ -127,7 +130,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="revvrtv" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/minigame$Trial.coverage" NAME="Trial Coverage Results" MODIFIED="1571075078970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/minigame$Trial.coverage" NAME="Trial Coverage Results" MODIFIED="1571311869635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/minigame$functions.coverage" NAME="functions Coverage Results" MODIFIED="1571072526231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

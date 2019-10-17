@@ -9,7 +9,12 @@ def text_to_screen(screen, text, x, y, color = (255, 255, 255), size = 20):
 
 
 def drawWindow(game):
-    game.win.fill((0, 0, 0))  # Fills the screen with black
+    if game.background is None:
+        game.win.fill((0, 0, 0))  # Fills the screen with black
+
+    else:
+        game.win.blit(game.background, (0,0))
+        
     game.player1.draw(game.win)
     game.player2.draw(game.win)
     for i in game.shots1.shotsList:
