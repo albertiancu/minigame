@@ -1,5 +1,6 @@
 import pygame
 import time
+#eara
 class Shots(object):
     def __init__(self):
         self.shotsList = []
