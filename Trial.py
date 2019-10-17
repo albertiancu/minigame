@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import time
 import pygame
 from functions import *
@@ -11,22 +13,28 @@ windows_width = 1000
 windows_height = 700
 win = pygame.display.set_mode((windows_width, windows_height))
 pygame.display.set_caption("First Game")
-standing1 = pygame.image.load('images/character1/standing.png')
+standing1 = pygame.image.load('images/character1/char_albert.png')
 standing2 = pygame.image.load('images/character2/L1.png')
-walkLeft1 = [pygame.image.load('images/character1/L1.png'), pygame.image.load('images/character1/L2.png'), pygame.image.load('images/character1/L3.png'),
-              pygame.image.load('images/character1/L4.png'), pygame.image.load('images/character1/L5.png'), pygame.image.load('images/character1/L6.png'),
-              pygame.image.load('images/character1/L7.png'), pygame.image.load('images/character1/L8.png'), pygame.image.load('images/character1/L9.png')]
-walkRight1 = [pygame.image.load('images/character1/R1.png'), pygame.image.load('images/character1/R2.png'), pygame.image.load('images/character1/R3.png'),
-              pygame.image.load('images/character1/R4.png'), pygame.image.load('images/character1/R5.png'), pygame.image.load('images/character1/R6.png'),
-              pygame.image.load('images/character1/R7.png'), pygame.image.load('images/character1/R8.png'), pygame.image.load('images/character1/R9.png')]
+#walkLeft1 = [pygame.image.load('images/character1/L1.png'), pygame.image.load('images/character1/L2.png'), pygame.image.load('images/character1/L3.png'),
+ #             pygame.image.load('images/character1/L4.png'), pygame.image.load('images/character1/L5.png'), pygame.image.load('images/character1/L6.png'),
+  #            pygame.image.load('images/character1/L7.png'), pygame.image.load('images/character1/L8.png'), pygame.image.load('images/character1/L9.png')]
+walkLeft1 = [pygame.image.load('images/character1/char_albert_left.png'), pygame.image.load('images/character1/char_albert_left.png'), pygame.image.load('images/character1/char_albert_left.png'),
+             pygame.image.load('images/character1/char_albert_left.png'), pygame.image.load('images/character1/char_albert_left.png') , pygame.image.load('images/character1/char_albert_left.png'),
+             pygame.image.load('images/character1/char_albert_left.png'), pygame.image.load('images/character1/char_albert_left.png'), pygame.image.load('images/character1/char_albert_left.png')]
+#walkRight1 = [pygame.image.load('images/character1/R1.png'), pygame.image.load('images/character1/R2.png'), pygame.image.load('images/character1/R3.png'),
+ #             pygame.image.load('images/character1/R4.png'), pygame.image.load('images/character1/R5.png'), pygame.image.load('images/character1/R6.png'),
+  #            pygame.image.load('images/character1/R7.png'), pygame.image.load('images/character1/R8.png'), pygame.image.load('images/character1/R9.png')]
+walkRight1 = [pygame.image.load('images/character1/char_albert_right.png'), pygame.image.load('images/character1/char_albert_right.png'),pygame.image.load('images/character1/char_albert_right.png'),
+              pygame.image.load('images/character1/char_albert_right.png'),pygame.image.load('images/character1/char_albert_right.png'),pygame.image.load('images/character1/char_albert_right.png'),
+              pygame.image.load('images/character1/char_albert_right.png'), pygame.image.load('images/character1/char_albert_right.png'),pygame.image.load('images/character1/char_albert_right.png')]
 walkLeft2 = [pygame.image.load('images/character2/L1.png'), pygame.image.load('images/character2/L2.png'), pygame.image.load('images/character2/L3.png'),
               pygame.image.load('images/character2/L4.png'), pygame.image.load('images/character2/l5.png'), pygame.image.load('images/character2/L6.png'),
               pygame.image.load('images/character2/L7.png'), pygame.image.load('images/character2/L8.png'), pygame.image.load('images/character2/L9.png')]
 walkRight2 = [pygame.image.load('images/character2/R1.png'), pygame.image.load('images/character2/R2.png'), pygame.image.load('images/character2/R3.png'),
               pygame.image.load('images/character2/R4.png'), pygame.image.load('images/character2/R5.png'), pygame.image.load('images/character2/R6.png'),
               pygame.image.load('images/character2/R7.png'), pygame.image.load('images/character2/R8.png'), pygame.image.load('images/character2/R9.png')]
-player1 = Player(x=700, y=600, width=64, height=64, vel=5, color=(255, 0, 0), life=10, walkLeft=walkLeft1, walkRight=walkRight1, standing=standing1)
-player2 = Player(x=100, y=600, width=64, height=64, vel=5, color=(0, 255, 0), life=10, walkLeft=walkLeft2, walkRight=walkRight2, standing=standing2)
+player1 = Player(x=700, y=500, width=64, height=64, vel=5, color=(255, 0, 0), life=10, walkLeft=walkLeft1, walkRight=walkRight1, standing=standing1)
+player2 = Player(x=100, y=500, width=64, height=64, vel=5, color=(0, 255, 0), life=10, walkLeft=walkLeft2, walkRight=walkRight2, standing=standing2)
 shots1 = Shots()
 shots2 = Shots()
 game = Game(win, player1, player2, shots1, shots2, background='images/backgrounds/ring.jpg')
@@ -56,21 +64,24 @@ while run:
         game.player1.right = True
 
     else:
-        game.player1.left = False
-        game.player1.right = False
+       # game.player1.left = False
+      #  game.player1.right = False
         game.player1.walkCount = 0
 
     if keys[pygame.K_RSHIFT] or keys[pygame.K_LSHIFT]:
         if time.time() - game.shots1.lastShotTime >= 0.2:
-            game.shots1.addShot((game.player1.x, game.player1.y))
+            game.shots1.addShot((game.player1.x + 50, game.player1.y + 100,  game.player1.right))
             game.shots1.lastShotTime = time.time()
 
     newShots = []
     for i in game.shots1.shotsList:
-        i = (i[0] - 100, i[1])
-        if i[0] < 0:
+        if i[2]:
+            i = (i[0] + 50, i[1], True)
+        else:
+            i = (i[0] - 50, i[1], False)
+        if i[0] < 0 or i[0] > windows_width:
             continue
-        if i[0] <= game.player2.x + game.player2.width and (i[1] < game.player2.y + game.player2.height and i[1] + 5 > game.player2.y) \
+        if i[0] <= game.player2.x + game.player2.width and i[0] >= game.player2.x and (i[1] < game.player2.y + game.player2.height and i[1] + 5 > game.player2.y) \
                 and not game.player2.dead:
             game.player2.life -= 1
             if game.player2.life == 0:
@@ -90,8 +101,8 @@ while run:
 
         if keys[pygame.K_SPACE]:
             game.player1.isJump = True
-            game.player1.left = False
-            game.player1.right = False
+            #ame.player1.left = False
+           # game.player1.right = False
             game.player1.walkCount = 0
 
 

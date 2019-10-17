@@ -18,7 +18,8 @@ def drawWindow(game):
     game.player1.draw(game.win)
     game.player2.draw(game.win)
     for i in game.shots1.shotsList:
-        pygame.draw.rect(game.win, (0, 0, 255), (i[0], i[1], 10, 10))
+       # game.win.blit(pygame.image.load('images/character1/mamaliga.png'), (i[0],i[1] + 60))
+        pygame.draw.circle(game.win, (255, 249, 140), (int(i[0]), int(i[1])), 10)
 
     text_to_screen(game.win, 'computer life: ' + str(game.player2.life), 10, 10)
 

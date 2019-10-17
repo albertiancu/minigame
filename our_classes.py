@@ -34,7 +34,7 @@ class Player(object):
         self.walkLeft = walkLeft
         self.walkRight = walkRight
         self.standing = standing
-        self.left = False
+        self.left = True
         self.right = False
         self.walkCount = 0
 
